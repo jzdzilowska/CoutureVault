@@ -1,0 +1,35 @@
+.search-results-list {
+  list-style: none !important;
+  list-style-type: none !important;
+  padding: 0;
+}
+
+.search-results-list li {
+  margin-bottom: 10px; /* Adjust the spacing as needed */
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+.gridView-wrapper {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill, 250px);
+  column-gap: 20px;
+  row-gap: 30px;
+  height: fit-content;
+}
+
+.searchView-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically by default */
+}
+
+.searchView-filters {
+  display: flex;
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+.no-results {
+  margin-left: 25px;
+  margin-top: 30px;
+}

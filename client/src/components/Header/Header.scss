@@ -1,0 +1,96 @@
+@import "../../global/globalCssVariables";
+@import url("https://use.typekit.net/myt2fra.css");
+@import url("https://use.typekit.net/myt2fra.css");
+
+.header {
+  width: 100vw;
+  height: 50px;
+  font-family: "compendium", sans-serif;
+  font-style: normal;
+  font-size: 40px;
+  background-color: $primary-background-color;
+  color: $primary-text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: $standard-border;
+  position: fixed;
+
+  .left-bar {
+    display: flex;
+    align-items: center;
+  }
+
+  .right-bar {
+    width: max-content;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header .name {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.header .button {
+  padding-left: 8px;
+}
+
+@keyframes flashBackground {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #cfcfcf;
+  }
+}
+
+.header-linking {
+  animation: flashBackground 0.7s infinite alternate;
+  width: 100vw;
+  height: 50px;
+  background-color: $primary-background-color;
+  color: $primary-text-color;
+  display: flex;
+  align-items: center;
+  border-bottom: $standard-border;
+  position: fixed;
+  justify-content: space-between;
+  padding: 10px;
+
+  .name {
+    margin-right: 10px;
+  }
+
+  .button {
+    padding-left: 8px;
+  }
+
+  .left-bar {
+    font-family: "compendium", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .right-bar {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: $main-font-family;
+    font-weight: 200;
+    font-style: normal;
+  }
+}
+
+.name {
+  margin-top: 5px;
+  padding: 10px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}

@@ -1,0 +1,78 @@
+@import url("https://use.typekit.net/myt2fra.css");
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.login-body h1 {
+  margin: 0;
+  color: black;
+  font-family: "compendium";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  text-align: center;
+  margin-left: 30px;
+  animation: colorTransition 2s forwards;
+
+  @keyframes colorTransition {
+    from {
+      color: rgb(0, 0, 0); /* Set the starting color */
+    }
+    to {
+      color: rgb(255, 255, 255); /* Set the ending color */
+      filter: drop-shadow(0px 0px 6px #ffffff);
+    }
+  }
+}
+
+.login-body h2 {
+  position: absolute;
+  color: white;
+  font-family: "lust-sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 30px;
+  margin-top: -120px;
+  margin-left: -140px;
+}
+
+.login-body .btn {
+  position: absolute;
+  color: white;
+  font-family: "lust-sans", sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 30px;
+  width: auto;
+  transition: 0.5s ease;
+  background-color: transparent;
+  margin-top: 145px;
+  margin-right: -160px;
+}
+
+.login-body .btn:hover {
+  filter: drop-shadow(0px 0px 6px #ffffff);
+  margin-top: 148px;
+  animation: pulse 1.7s infinite; /* animation duration */
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

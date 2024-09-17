@@ -1,0 +1,124 @@
+@import "../../../../../global/globalCssVariables";
+
+.grid-folderPreview {
+  cursor: pointer;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  color: black;
+
+  &:hover {
+    .folder-top,
+    .folder-content {
+      box-shadow: $standard-shadow;
+    }
+  }
+}
+
+.grid-nodePreview {
+  color: black;
+  cursor: pointer;
+  width: 100%;
+  height: 330px;
+  border-radius: 5px;
+  background-color: white;
+  border: $standard-border;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+
+  // &:hover {
+  //   display: flex;
+  //   justify-content: center;
+  //   transition: 0.5s;
+  //   .content-preview {
+  //     transition: 0.7s;
+  //     background-color: white;
+  //     border-color: white;
+  //     height: 0%;
+  //   }
+  // }
+
+  &:hover {
+    .content-preview img {
+      transition: 0.7s ease;
+      transform: scale(1.2);
+    }
+  }
+
+  &:not(:hover) {
+    .content-preview img {
+      transition: 0.7s ease;
+      transform: scale(1); /* Set the default scale when not hovering */
+    }
+  }
+
+  .content-preview {
+    overflow: hidden;
+    height: 80%;
+    border-bottom: $standard-border;
+    padding: 2px;
+    background-color: $secondary-background-color;
+    align-items: center;
+  }
+
+  .node-info {
+    display: flex;
+    position: relative;
+    height: 20%;
+    flex-direction: row;
+    justify-content: left;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    .info-container {
+      width: 100%;
+      .main-info {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        .icon {
+          height: 20px;
+        }
+        .title {
+          font-weight: 400;
+          font-size: 1rem;
+          font-weight: bold;
+          padding-bottom: 1px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          display: flex;
+          justify-content: flex-start;
+        }
+      }
+
+      .sub-info {
+        font-size: 0.7rem;
+        color: #606060;
+      }
+    }
+
+    .more {
+      cursor: pointer;
+      padding: 3px;
+      position: absolute;
+      left: calc(100% - 30px);
+      border-radius: 2px;
+      transition: 0.2s;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .subNode-block {
+    height: 20px;
+    width: 20px;
+  }
+}

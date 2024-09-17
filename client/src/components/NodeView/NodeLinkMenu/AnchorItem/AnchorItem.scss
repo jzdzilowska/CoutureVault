@@ -1,0 +1,82 @@
+@import "../../../../global/globalCssVariables";
+
+.anchorItem {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: black;
+    color: white;
+  }
+
+  &.selected {
+    background-color: rgb(241, 241, 241);
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+  .anchorPreview {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .anchorPreview-image {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .anchorPreview-text {
+      border-radius: 2px;
+      // color: blue;
+      font-weight: bold;
+      font-size: 1rem;
+      overflow: hidden;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      // text-decoration: underline;
+      width: fit-content;
+    }
+  }
+}
+.anchorContent {
+  grid-area: linkContent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .anchorInfo {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .anchorTitle {
+    font-weight: 600;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .anchorExplainer {
+    font-style: italic;
+  }
+
+  .anchorMoreInfo {
+    display: none;
+    width: fit-content;
+    height: fit-content;
+  }
+}

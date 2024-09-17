@@ -1,0 +1,42 @@
+/* DropdownFilter.css */
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+/* Style for the dropdown select */
+select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Style for the dropdown options */
+option {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Style for the selected option */
+option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style for the dropdown arrow icon */
+select:after {
+  content: "\25BC"; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

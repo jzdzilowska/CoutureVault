@@ -1,0 +1,52 @@
+@import "../../../../global/globalCssVariables";
+
+.editorContent {
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+
+  text-align: justify;
+  text-justify: inter-word;
+  // text-align-last: center;
+  /* for IE9 */
+  -ms-text-align-last: center;
+}
+
+.ProseMirror {
+  a {
+    color: #000000;
+    text-decoration: underline;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      color: #a0a0a0;
+    }
+  }
+}
+
+.ProseMirror {
+  h1 {
+    /* Define your styles for H1 here */
+    font-size: 29px;
+    font-weight: bold;
+    /* Add any other styling properties you want */
+  }
+
+  h2 {
+    /* Define your styles for H2 here */
+    font-size: 24px;
+    font-weight: bold;
+    /* Add any other styling properties you want */
+  }
+
+  h3 {
+    /* Define your styles for H3 here */
+    font-size: 18px;
+    font-weight: bold;
+    /* Add any other styling properties you want */
+  }
+
+  /* Add styles for other elements as needed */
+}

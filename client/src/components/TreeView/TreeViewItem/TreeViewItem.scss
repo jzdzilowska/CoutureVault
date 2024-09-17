@@ -1,0 +1,77 @@
+@import "../../../global/globalCssVariables";
+
+.treeView-item {
+  .item-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    padding-left: 20px;
+    gap: 4px;
+    cursor: pointer;
+    background-color: white;
+    align-items: center;
+    align-content: center;
+    transition: 0.2s;
+
+    &.false {
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+
+    &.true {
+      background-color: rgb(241, 241, 241);
+      color: rgb(0, 0, 0);
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+
+    .icon-hover {
+      display: flex;
+      margin: 2px;
+      width: 20px;
+      height: 20px;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s;
+      border-radius: 4px;
+
+      .icon-wrapper {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        transition: 0.2s;
+      }
+
+      &.true {
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    .text-wrapper {
+      -webkit-user-select: none;
+      user-select: none;
+      padding-bottom: 2px;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .item-children {
+    position: relative;
+    left: 28px;
+
+    &.false {
+      display: none;
+    }
+  }
+}

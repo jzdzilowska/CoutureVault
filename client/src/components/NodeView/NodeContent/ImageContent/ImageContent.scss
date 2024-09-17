@@ -1,0 +1,137 @@
+@import "../../../../global/globalCssVariables";
+
+.imageContent-preview {
+  box-shadow: rgb(0 0 0 / 30%) 0px 2px 3px;
+  overflow: hidden;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+
+  img {
+    padding: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.imageWrapper {
+  padding: 20px;
+
+  .imageContainer {
+    overflow: visible;
+    position: relative;
+    object-fit: cover;
+
+    .image {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .image-anchor {
+      border: 2px red solid;
+      position: absolute;
+      cursor: pointer;
+      z-index: 1;
+
+      &.selected {
+        z-index: 2;
+        border: 2px blue solid;
+        position: absolute;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+      }
+    }
+
+    .image-startAnchor {
+      background-color: rgba(212, 237, 218, 0.7);
+      position: absolute;
+      z-index: 1;
+    }
+
+    .selection {
+      position: absolute;
+      border: dotted black 3px;
+      z-index: 1;
+
+      .selection-close {
+        cursor: pointer;
+        position: absolute;
+        background-color: $secondary-background-color;
+        border-radius: 2px;
+        opacity: 0.8;
+        transition: 0.1s;
+        right: 0;
+
+        &:hover {
+          opacity: 1;
+          background-color: $tertiary-background-color;
+        }
+      }
+    }
+
+    img {
+      padding: 0;
+      object-fit: cover;
+      object-position: 0 0;
+    }
+  }
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center; /* Vertically align elements in the container */
+  gap: 40px; /* Adjust the spacing between elements as needed */
+  margin-bottom: 20px;
+}
+
+.numberInput {
+  display: flex; /* Use Flexbox to arrange the input field and buttons */
+  align-items: center; /* Vertically align elements in the input */
+}
+
+.revert-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 70%;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-family: $main-font-family;
+  padding: 9px 24px;
+  border-radius: 5px;
+  gap: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 0;
+  background-color: lavender;
+  color: black;
+}
+
+.revert-button:hover {
+  background-color: black;
+  color: lavender;
+  font-weight: 800;
+}
+
+/* Active (pressed) state styles */
+.revert-button:active {
+  background-color: black;
+  color: lavender;
+  font-weight: 800;
+}
+
+.icon {
+  margin-right: 8px; /* Adjust the margin as needed for spacing */
+  font-size: 20px;
+}
+
+.noImage svg {
+  width: 300px;
+  height: auto;
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(0px 0px 5px #00000047);
+}
