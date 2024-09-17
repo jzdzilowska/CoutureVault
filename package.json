@@ -1,0 +1,20 @@
+{
+  "name": "basic-hypermedia",
+  "version": "1.0.0",
+  "description": "basic hypermedia",
+  "author": "Jinoo Hong, Peter Li, Xinzhe Chai & Geireann Lindfield Roberts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "echo \"Make sure you have CD'd into either the client or server folder!\"",
+    "install": "echo \"Make sure you have CD'd into either the client or server folder!\""
+  },
+  "dependencies": {
+    "firebase": "^10.7.1",
+    "mongodb": "^6.3.0",
+    "react-router-dom": "^6.20.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "dotenv": "^16.3.1"
+  }
+}
